@@ -1,6 +1,6 @@
 /**
- * @copyright M VISHWAJNA 2024 All rights reserved
- * @author  VISHWAJNA
+ * @copyright M ANSARI 2024 All rights reserved
+ * @author  ANSARI
  */
 
 "use strict";
