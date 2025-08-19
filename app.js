@@ -8,12 +8,6 @@
 import { fetchData, url } from "./api.js";
 import * as module from "./module.js";
 
-/**
- * Add Event Listener on Multiple Elements
- * @param {NodeList} elements Elements node array
- * @param {string} eventType Event Type e.g.: "click", "mouseover"
- * @param {Function} callback Callback function
- */
 function addEventOnElements(elements, eventType, callback) {
   for (const element of elements) element.addEventListener(eventType, callback);
 }
@@ -93,12 +87,6 @@ const currentLocationBtn = document.querySelector(
   "[data-current-location-btn]"
 );
 const errorContent = document.querySelector("[data-error-content]");
-
-/**
- * Render Weather Data in HTML Page
- * @param {number} lat Latitude
- * @param {number} lon Longitude
- */
 
 export const updateWeather = function (lat, lon) {
   loading.style.display = "grid";
