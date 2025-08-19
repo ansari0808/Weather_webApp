@@ -1,8 +1,8 @@
 /**
 
  * @fileoverview All module functions
- * @copyright VISHWAJNA 2024 All rights reserved
- * @author  M VISHWAJNA 
+ * @copyright ANSARI 2024 All rights reserved
+ * @author  M ANSARI 
  */
 
 
@@ -33,13 +33,6 @@ export const monthNames = [
   "Dec",
 ];
 
-/**
- *
- * @param {number} dateUnix Unix date in seconds
- * @param {number} timezone Timezone shift from UTC
- * @returns {string} Date string. Format: "Sunday 10, Jan"
- */
-
 export const getDate = function (dateUnix, timezone) {
   const date = new Date((dateUnix + timezone) * 1000);
   const weekDayName = weekDayNames[date.getUTCDay()];
@@ -47,13 +40,6 @@ export const getDate = function (dateUnix, timezone) {
 
   return `${weekDayName} ${date.getUTCDate()}, ${monthName}`;
 };
-
-/**
- *
- * @param {number} timeUnix Unix date in seconds
- * @param {number} timezone Timezone shift from UTC
- * @returns {string} Time string, Format: "HH:MM AM/PM"
- */
 
 export const getTime = function (timeUnix, timezone) {
   const date = new Date((timeUnix + timezone) * 1000);
@@ -64,12 +50,6 @@ export const getTime = function (timeUnix, timezone) {
   return `${hours % 12 || 12}:${minutes} ${period}`;
 };
 
-/**
- *
- * @param {number} timeUnix Unix date in seconds
- * @param {number} timezone Timezone shift from UTC
- * @returns {string} Time string, Format: "HH AM/PM"
- */
 
 export const getHours = function (timeUnix, timezone) {
   const date = new Date((timeUnix + timezone) * 1000);
@@ -79,11 +59,7 @@ export const getHours = function (timeUnix, timezone) {
   return `${hours % 12 || 12} ${period}`;
 };
 
-/**
- *
- * @param {number} mps Meters per seconds
- * @returns {number} Kilometers per second
- */
+
 export const mps_to_kmh = (mps) => {
   const mph = mps * 3600;
   return mph / 1000;
