@@ -1,8 +1,8 @@
 /**
  * @license MIT
  * @fileoverview Menage all routes
- * @copyright VISHWAJNA 2024 All rights reserved
- * @author M VISHWAJNA>
+ * @copyright ANSARI 2024 All rights reserved
+ * @author M ANSARI>
  */
 "use strict";
 
@@ -22,10 +22,6 @@ const currentLocation = function () {
   );
 };
 
-/**
- *
- * @param {string} query Searched query
- */
 const searchedLocation = (query) => updateWeather(...query.split("&"));
 // updateWeather("lat=51.5073219", "lon=-0.1276474")
 
